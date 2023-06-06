@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src",
     "outDir": "./dist/",
     "noImplicitAny": true,
     "module": "ESNext",
@@ -14,5 +15,5 @@
     "compilerOptions": {
       "module": "CommonJS"
     }
-  }
+  },
 }
