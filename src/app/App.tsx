@@ -3,6 +3,7 @@ import {Link, Route, Routes} from "react-router-dom";
 import {classNames} from "shared/lib/classNames";
 import {useTheme} from "app/providers/ThemeProvider";
 import AppRouter from "./providers/AppRouter/AppRouter";
+import {Navbar} from "widgets/Navbar";
 
 const App = () => {
     const {theme, toggleTheme} = useTheme();
@@ -12,8 +13,7 @@ const App = () => {
           <button onClick={toggleTheme}>
             Сменить тему
           </button>
-          <Link to={'/'}>Главная</Link>
-          <Link to={'/about'}>О странице</Link>
+          <Navbar/>
           <AppRouter/>
       </div>
   )
