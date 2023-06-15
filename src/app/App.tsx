@@ -1,18 +1,16 @@
 import './styles/index.scss'
-import {Link, Route, Routes} from "react-router-dom";
 import {classNames} from "shared/lib/classNames";
 import {useTheme} from "app/providers/ThemeProvider";
 import AppRouter from "./providers/AppRouter/AppRouter";
 import {Navbar} from "widgets/Navbar";
+import {ThemeSwitcher} from "../shared/ui/ThemeSwitcher/ThemeSwitcher";
 
 const App = () => {
-    const {theme, toggleTheme} = useTheme();
+    const {theme} = useTheme();
 
     return (
       <div className={classNames('app', [theme], {})}>
-          <button onClick={toggleTheme}>
-            Сменить тему
-          </button>
+          <ThemeSwitcher/>
           <Navbar/>
           <AppRouter/>
       </div>
